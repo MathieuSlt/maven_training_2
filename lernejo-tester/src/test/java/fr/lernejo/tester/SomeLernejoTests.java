@@ -11,7 +11,7 @@ public class SomeLernejoTests {
 
     @TestMethod
     public void ko() {
-        throw new IllegalAccessException("ko");
+        throw new IllegalStateException("ko");
     }
 
     public void none() {
