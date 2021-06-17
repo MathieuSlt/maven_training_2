@@ -4,28 +4,21 @@ import fr.lernejo.tester.SomeLernejoTests;
 import fr.lernejo.tester.api.TestMethod;
 
 import java.io.IOException;
-import java.lang.reflect.Method;
-import java.util.List;
-import java.util.TreeMap;
 
 public class TestClassDescriptionLernejoTests {
 
-    public static boolean assertEquals(int got, int expected) {
-        return (got == expected);
+    public static void assertEquals(int expect, int got) {
+        if (expect != got)
+            throw new RuntimeException("Assertion failed, expected " + expect + ", got " + got + "!");
     }
 
     @TestMethod
-    public static void test() {
-        List<Method> liste = new TestClassDescription(SomeLernejoTests.class).listTestMethods();
-
-        boolean test = assertEquals(liste.size(), 2);
-        System.out.println(test);
-        if (test == false){
-            throw new IllegalStateException("Size of the list is false");
+    public void test() {
+        try {
+            var list = new TestClassDescription(SomeLernejoTests.class).listTestMethods();
+            assertEquals(2, list.size());
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
         }
-    }
-
-    public static void main(String[] args) {
-        test();
     }
 }

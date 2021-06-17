@@ -1,7 +1,5 @@
 package fr.lernejo.tester.internal;
 
-import org.reflections.Reflections;
-import org.reflections.scanners.SubTypesScanner;
 
 import java.util.List;
 import java.util.Set;
@@ -14,7 +12,7 @@ public class TestClassDiscoverer {
         this.name = name;
     }
 
-    public List<TestClassDescription> listTestClasses() {
+    /*public List<TestClassDescription> listTestClasses() {
         Reflections = new Reflections(name, new SubTypeScanner(false));
         Set<Class<?>> allTypes = reflections.getSubTypesOf(Object.class);
 
@@ -23,6 +21,6 @@ public class TestClassDiscoverer {
             .map(TestClassDescription::new)
             .filter(s -> !s.listTestMethods().isEmpty())
             .toList();
-    }
+    }*/
 
 }
