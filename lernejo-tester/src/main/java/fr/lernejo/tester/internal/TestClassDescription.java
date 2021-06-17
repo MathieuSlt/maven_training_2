@@ -4,7 +4,6 @@ import fr.lernejo.tester.api.TestMethod;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
-import java.sql.Types;
 import java.util.Arrays;
 import java.util.List;
 

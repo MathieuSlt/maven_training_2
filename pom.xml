@@ -10,7 +10,6 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>lernejo-tester</module>
-        <module>sample</module>
     </modules>
 
     <profiles>
@@ -28,7 +27,7 @@
         <reflections.version>0.9.12</reflections.version>
     </properties>
 
-    <dependencyManagement>  <!--(1)-->
+    <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.reflections</groupId>
